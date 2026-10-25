@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COMP 3512 — Product SPA</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- CSS framework (e.g. Tailwind) can be added here. Remember: CSS only, no JS from it. -->
+</head>
+<body>
+
+  <!-- ===== HEADER (same on every view) ===== -->
+  <header>
+    <nav>
+      <a href="#" id="logo-link">Logo</a>
+      <ul>
+        <li><a href="#" data-view="home">Home</a></li>
+        <li><a href="#" data-view="browse">Browse</a></li>
+        <li><a href="#" data-view="about">About</a></li>
+      </ul>
+      <a href="#" data-view="cart">Cart <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+  <!-- ===== VIEWS: shown/hidden by JS ===== -->
+  <main>
+    <article id="home">
+      <!-- Home view: hero + featured products -->
+    </article>
+
+    <article id="browse" hidden>
+      <section id="filter">
+        <!-- Name / Category / Rating / Price accordions + sort + clear -->
+      </section>
+      <section id="results">
+        <!-- Product cards rendered here -->
+      </section>
+    </article>
+
+    <article id="singleproduct" hidden>
+      <!-- Breadcrumb, image, details, add-to-cart, specs/reviews tabs -->
+    </article>
+
+    <article id="cart" hidden>
+      <!-- Cart items, shipping, summary, checkout -->
+    </article>
+  </main>
+
+  <!-- ===== FOOTER (same on every view) ===== -->
+  <footer>
+    <!-- GitHub link, etc. -->
+  </footer>
+
+  <!-- ===== ABOUT dialog (modal) ===== -->
+  <dialog id="about">
+    <!-- About info + Close button -->
+  </dialog>
+
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
